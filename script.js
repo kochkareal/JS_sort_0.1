@@ -8,6 +8,7 @@
 document.querySelector('#sort-minMax').onclick = SortMinMax; //привязываем кнопки
 document.querySelector('#sort-maxMin').onclick = SortMaxMin;
 document.querySelector('#sort-rait').onclick = SortMaxMinRait; 
+document.querySelector('#add-item').onclick = AddItem; 
 
 function SortMinMax(){                                       //от меньшего к большему
     let tovar = document.querySelector('#tovar');
@@ -47,4 +48,14 @@ function SortMaxMinRait(){                                          //от бо�
 
 function insertAfter(elem, refElem){
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+}
+
+function AddItem(){
+    var text1 = document.getElementById("title").value;
+    var text2 = document.getElementById("raiting").value;
+    var text3 = document.getElementById("price").value;    
+    var newElement = document.createElement("div");
+    newElement.innerHTML = text1 + " " + text2 + " " + text3 ;
+    document.getElementById("tovar").appendChild(newElement);
+
 }
