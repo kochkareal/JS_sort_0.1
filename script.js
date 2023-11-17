@@ -63,7 +63,7 @@ newDiv.classList.add("tovar-item");
 newDiv.setAttribute("raiting", text2);
 newDiv.setAttribute("tovar-price", text3);
     
-    newElement.textContent = text1 + " " + text3 + "$ (" + text2 + ")";
+    newDiv.textContent = text1 + " " + text3 + "$ (" + text2 + ")";
     document.getElementById("tovar").appendChild(newDiv);
 
 }
