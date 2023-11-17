@@ -5,19 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сортировка</title>
+    <style>
+     .container{margin: 0 auto;
+               max-width:400px;
+                border-radius:10px;
+                background: white;
+                padding:15px}
+    body{background-color:#2f8fff;font-family:Arial;font-size: 24px;}
+    </style>
 </head>
 <body>
-    <div class="tovar" id="tovar">
-        <div class="tovar-item" raiting="3" tovar-price="100">1. 100$ (3)</div>
-        <div class="tovar-item" raiting="4.7" tovar-price="800">2. 800$ (4.7)</div>
-        <div class="tovar-item" raiting="4" tovar-price="200">3. 200$ (4)</div>
-        <div class="tovar-item" raiting="1" tovar-price="500">4. 500$ (1)</div>
-    </div>
-    <div>
-        <Button id="sort-minMax">По возростанию</Button>
-        <Button id="sort-maxMin">По убыванию</Button>
-        <Button id="sort-rait">По рейтингу</Button>
-     </div>
+    <div class="container">
+        <h1> Сортировка </h1>
+        <div class="tovar" id="tovar">
+            <div class="tovar-item" raiting="3" tovar-price="100">1. 100$ (3)</div>
+            <div class="tovar-item" raiting="4.7" tovar-price="800">2. 800$ (4.7)</div>
+            <div class="tovar-item" raiting="4" tovar-price="200">3. 200$ (4)</div>
+            <div class="tovar-item" raiting="1" tovar-price="500">4. 500$ (1)</div>
+          </div>
+    
+    
+        <div>
+            <Button id="sort-minMax">По возростанию</Button>
+            <Button id="sort-maxMin">По убыванию</Button>
+            <Button id="sort-rait">По рейтингу</Button>
+        </div>
+      </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
