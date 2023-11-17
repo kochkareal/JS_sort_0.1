@@ -55,7 +55,7 @@ function AddItem(){
     var text2 = document.getElementById("raiting").value;
     var text3 = document.getElementById("price").value;    
     var newElement = document.createElement("div");
-    newElement.innerHTML = text1 + " " + text2 + " " + text3 ;
+    newElement.innerHTML = text1 + " " + text3 + "$ (" + text2 + ")";
     document.getElementById("tovar").appendChild(newElement);
 
 }
