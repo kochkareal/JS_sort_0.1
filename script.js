@@ -54,8 +54,16 @@ function AddItem(){
     var text1 = document.getElementById("title").value;
     var text2 = document.getElementById("raiting").value;
     var text3 = document.getElementById("price").value;    
-    var newElement = document.createElement("div");
-    newElement.innerHTML = text1 + " " + text3 + "$ (" + text2 + ")";
-    document.getElementById("tovar").appendChild(newElement);
+    var newDiv = document.createElement("div");
+
+    // Задаем класс элемента
+newDiv.classList.add("tovar-item");
+
+// Устанавливаем атрибуты элемента
+newDiv.setAttribute("raiting", text2);
+newDiv.setAttribute("tovar-price", text3);
+    
+    newElement.textContent = text1 + " " + text3 + "$ (" + text2 + ")";
+    document.getElementById("tovar").appendChild(newDiv);
 
 }
