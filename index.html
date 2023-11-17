@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сортировка</title>
     <style>
-     .container{margin: 0 auto;
-               max-width:400px;
+     .container{margin: 15px auto;
+                max-width:600px;
                 border-radius:10px;
                 background: white;
-                padding:15px}
+                padding:15px
+                }
     body{background-color:#2f8fff;font-family:Arial;font-size: 24px;}
     </style>
 </head>
 <body>
     <div class="container">
-        <h1> Сортировка </h1>
+        <b> Сортировка </b>
         <div class="tovar" id="tovar">
             <div class="tovar-item" raiting="3" tovar-price="100">1. 100$ (3)</div>
             <div class="tovar-item" raiting="4.7" tovar-price="800">2. 800$ (4.7)</div>
@@ -31,6 +32,16 @@
             <Button id="sort-rait">По рейтингу</Button>
         </div>
       </div>
+
+    <div class="container">
+                <b> Добавить </b>
+        <div>
+        <input type="text" name="title" placeholder="Название">
+        <input type="text" name="raiting" placeholder="Рейтинг">
+        <input type="text" name="price" placeholder="Цена">
+            <div>
+        <Button id="add-item">Добавить</Button>
+    </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
