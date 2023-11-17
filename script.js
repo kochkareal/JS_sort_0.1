@@ -1,7 +1,7 @@
 document.querySelector('#sort-minMax').onclick = SortMinMax; //привязываем кнопки
 document.querySelector('#sort-maxMin').onclick = SortMaxMin;
 document.querySelector('#sort-rait').onclick = SortMaxMinRait; 
-document.querySelector('#add-item').onclick = AddItem(document.getElementById("title").value, document.getElementById("price").value, document.getElementById("raiting").value); 
+document.querySelector('#add-item').onclick = AddRec; 
 document.querySelector('#add-random').onclick = AddRandom; 
 
 function SortMinMax(){                                       //от меньшего к большему
@@ -64,4 +64,8 @@ function getRandomNumber(min, max) {
 
 function AddRandom(){
    AddItem("Случайный товар", getRandomNumber(1, 9999), getRandomNumber(1, 10)) ;
+}
+
+function AddRec(){
+AddItem(document.getElementById("title").value, document.getElementById("price").value, document.getElementById("raiting").value)
 }
