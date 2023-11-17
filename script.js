@@ -1,14 +1,8 @@
-
-//replacedNode = parentNode.replaceChild(newChild, oldChild);
-
-//replacedNode = tovar.replaceChild(tovar.children[1], tovar.children[0]);
-//console.log(replacedNode);
-//tovar.appendChild (replacedNode)
-
 document.querySelector('#sort-minMax').onclick = SortMinMax; //привязываем кнопки
 document.querySelector('#sort-maxMin').onclick = SortMaxMin;
 document.querySelector('#sort-rait').onclick = SortMaxMinRait; 
-document.querySelector('#add-item').onclick = AddItem; 
+document.querySelector('#add-item').onclick = AddItem(document.getElementById("title").value, document.getElementById("price").value, document.getElementById("raiting").value); 
+document.querySelector('#add-random').onclick = AddRandom; 
 
 function SortMinMax(){                                       //от меньшего к большему
     let tovar = document.querySelector('#tovar');
@@ -50,20 +44,24 @@ function insertAfter(elem, refElem){
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
 
-function AddItem(){
-    var text1 = document.getElementById("title").value;
-    var text2 = document.getElementById("raiting").value;
-    var text3 = document.getElementById("price").value;    
+function AddItem(title, price, raiting){
     var newDiv = document.createElement("div");
 
     // Задаем класс элемента
-newDiv.classList.add("tovar-item");
+    newDiv.classList.add("tovar-item");
 
-// Устанавливаем атрибуты элемента
-newDiv.setAttribute("raiting", text2);
-newDiv.setAttribute("tovar-price", text3);
+    // Устанавливаем атрибуты элемента
+    newDiv.setAttribute("raiting", raiting);
+    newDiv.setAttribute("tovar-price", price);
     
-    newDiv.textContent = text1 + " " + text3 + "$ (" + text2 + ")";
+    newDiv.textContent = title + " " + price + "$ (" + raiting + ")";
     document.getElementById("tovar").appendChild(newDiv);
+}
 
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function AddRandom(){
+   AddItem("Случайный товар", getRandomNumber(1, 9999), getRandomNumber(1, 10)) ;
 }
