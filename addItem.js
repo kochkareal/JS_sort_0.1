@@ -29,7 +29,7 @@ function addItem() {
     newItem.className = 'tovar-item';
     newItem.setAttribute('raiting', rating);
     newItem.setAttribute('tovar-price', price);
-    newItem.textContent = `${title} - Rating: ${rating}, Price: ${price}`;
+    newItem.textContent = `${title} - Рейтинг: ${rating}, Цена: ${price}`;
 
     const fragment = document.createDocumentFragment();
     fragment.appendChild(newItem);
