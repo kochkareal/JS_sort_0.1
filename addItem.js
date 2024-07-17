@@ -21,7 +21,7 @@ function addItem() {
     const price = document.getElementById('price').value.trim();
 
     if (!title || !isValidNumber(rating) || !isValidNumber(price)) {
-        alert('Please fill all fields with valid data');
+        alert('Пожалуйста заполните поля корректно');
         return;
     }
 
